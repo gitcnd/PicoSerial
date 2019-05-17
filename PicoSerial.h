@@ -50,7 +50,7 @@ class PicoSerial : public Print {
 /*
 =head2 FUNCTIONS
 
-  =for markdown
+=for markdown
   ```C
 
     uint32_t begin(BAUD,rxCallBackFunction);		// Sets baud rate, and lets you tell PicoSerial which of your functions you want to call when data is ready. Returns baudrate

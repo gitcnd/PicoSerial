@@ -22,15 +22,14 @@ Ultra lightweight serial support for Arduino, properly supporting incoming inter
     void myIn(int c) {                            // this is an ISR - it gets called when new data comes in. buffer and exit this as fast as you can; do not do anything else in here.
       myBuffer[bufferIndex++]=c;
     }
-
-\`\`\`
+  ```
 
 ## FUNCTIONS
 
-    =for markdown
-    ```C
 
-      uint32_t begin(BAUD,rxCallBackFunction);            // Sets baud rate, and lets you tell PicoSerial which of your functions you want to call when data is ready. Returns baudrate
+  ```C
+
+    uint32_t begin(BAUD,rxCallBackFunction);            // Sets baud rate, and lets you tell PicoSerial which of your functions you want to call when data is ready. Returns baudrate
 
     int read()    // Unbuffered read.  returns -1 if no character is available or an available character.
 
