@@ -31,11 +31,14 @@ Ultra lightweight serial support for Arduino, properly supporting incoming inter
 
     uint32_t begin(BAUD,rxCallBackFunction);            // Sets baud rate, and lets you tell PicoSerial which of your functions you want to call when data is ready. Returns baudrate
 
-    int read()    // Unbuffered read.  returns -1 if no character is available or an available character.
+    int read()                    // Unbuffered read.  returns -1 if no character is available or an available character. Do not use if you supplied an rxCallBackFunction prior
 
     size_t write(uint8_t b)       // Unbuffered write; param[in] b byte to write. return 1
 
     boolean canWrite();           // true if we can do a nonblocking write next
+
+
+```
 
 ## Thanks
 

@@ -86,7 +86,7 @@ class PicoSerial : public Print {
 /*
 =pod
 
-  int read()	// Unbuffered read.  returns -1 if no character is available or an available character.
+  int read()			// Unbuffered read.  returns -1 if no character is available or an available character. Do not use if you supplied an rxCallBackFunction prior
 =cut
 */
   int read() {
@@ -131,6 +131,9 @@ ISR(USART_RX_vect) {
 
 /*
 =pod
+
+=for markdown
+```
 
 =head2 Thanks
 
